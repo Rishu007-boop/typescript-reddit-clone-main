@@ -53,7 +53,7 @@ function App() {
   const [currentPost, setCurrentPost] = useState<Post>();
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
   const [imageUploaded, setImageUploaded] = useState(false);
-  // const [submitPage, setSubmitPage] = useState(false);
+  const [submitPage, setSubmitPage] = useState(false);
   // const [renderNum, setRenderNum] = useState(5);
   // const [submitPostType, setSubmitPostType] = useState("");
   // const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
