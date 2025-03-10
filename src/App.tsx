@@ -14,12 +14,12 @@ import userArray from './utils/userArray';
 // Object & Method imports
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
-import { Subreddits, Subreddit, Post, Comment, UserData, baseCustomPost, Draft, Notifications, userObjectArray, userObject } from "./types/types";
+import { Subreddit, Post, Comment, UserData, baseCustomPost, Draft, Notifications, userObjectArray, userObject } from "./types/types";
 import { ToastContainer, toast } from 'react-toastify';
 // CSS Imports
 import 'react-toastify/dist/ReactToastify.css';
 import './App.scss';
-import { triggerAsyncId } from 'async_hooks';
+// import { triggerAsyncId } from 'async_hooks';
 
 function App() {
 
@@ -40,30 +40,30 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [userData, setUserData] = useState<userObjectArray>(userArray);
   const [currentUserData, setCurrentUserData] = useState<userObject>();
-  const [submitLoading, setSubmitLoading] = useState(false);
+  // const [submitLoading, setSubmitLoading] = useState(false);
   const [searchDropdown, setSearchDropdown] = useState(false);
   const [notificationArray, setNotificationArray] = useState<Notifications>([]);
   const [currentAnchor, setCurrentAnchor] = useState(Number);
   const [currentlyInspectedUser, setCurrentlyInspectedUser] = useState("");
-  const [selectedAnchor, setSelectedAnchor] = useState("");
-  const [cachedPosts, setCachedPosts] = useState<Post[]>();
-  const [cachedUserData, setCachedUserData] = useState<UserData>();
+  // const [selectedAnchor, setSelectedAnchor] = useState("");
+  // const [cachedPosts, setCachedPosts] = useState<Post[]>();
+  // const [cachedUserData, setCachedUserData] = useState<UserData>();
   const [currentSub, setCurrentSub] = useState<Subreddit>();
-  const [addedConfetti, setAddedConfetti] = useState(false);
+  // const [addedConfetti, setAddedConfetti] = useState(false);
   const [currentPost, setCurrentPost] = useState<Post>();
   const [subDropdownIsOpen, setSubDropdownIsOpen] = useState(false);
   const [imageUploaded, setImageUploaded] = useState(false);
-  const [submitPage, setSubmitPage] = useState(false);
-  const [renderNum, setRenderNum] = useState(5);
-  const [submitPostType, setSubmitPostType] = useState("");
-  const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
+  // const [submitPage, setSubmitPage] = useState(false);
+  // const [renderNum, setRenderNum] = useState(5);
+  // const [submitPostType, setSubmitPostType] = useState("");
+  // const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 10) + 1)
   const [communityTheme, setCommunityTheme] = useState(true);
   const [communityOptions, setCommunityOptions] = useState(false);
-  const [randomIntToString, setRandomIntToString] = useState(randomInt.toString());
+  // const [randomIntToString, setRandomIntToString] = useState(randomInt.toString());
   const [currentSort, setCurrentSort] = useState("best");
   const [loginModalState, setLoginModalState] = useState("closed");
   const [userName, setUserName] = useState("");
-  const [submitDropdownState, setSubmitDropdownState] = useState(false);
+  // const [submitDropdownState, setSubmitDropdownState] = useState(false);
   const [password, setPassword] = useState("");
   const [imageUploadCount, setImageUploadCount] = useState(0);
   const [mainComment, setMainComment] = useState("");
@@ -156,7 +156,6 @@ function App() {
     true,
     true
   ];
-
   // enable/disable search dropdown menu depending on search term length
   // Used in: NavBar.tsx
   useEffect(() => {
